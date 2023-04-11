@@ -1,0 +1,41 @@
+<app-header [drawer]="drawer"> </app-header>
+
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side" [opened]="true">
+    <mat-accordion class="example-headers-align" multi>
+      <div *ngFor="let link of links">
+        <button mat-button *ngIf="!link.children">
+          {{ link.title }}
+        </button>
+        <mat-expansion-panel hideToggle="true" *ngIf="link.children">
+          <mat-expansion-panel-header>
+            <mat-panel-title> {{ link.title }} </mat-panel-title>
+            <mat-icon> local_shipping</mat-icon>
+          </mat-expansion-panel-header>
+
+          <mat-nav-list>
+            <div *ngFor="let child of link.children">
+              <a
+                class="mat-item"
+                mat-list-item
+                matListItemTitle
+                href="{{ child.link }}"
+              >
+                {{ child.title }}
+                <button mat-icon-button matListItemMeta>
+                  <mat-icon>{{ child.icon }}</mat-icon>
+                </button>
+              </a>
+            </div>
+          </mat-nav-list>
+        </mat-expansion-panel>
+      </div>
+    </mat-accordion>
+  </mat-drawer>
+
+  <div class="container">
+    <mat-card class="min-height">
+      <router-outlet></router-outlet>
+    </mat-card>
+  </div>
+</mat-drawer-container>

@@ -1,0 +1,41 @@
+<div class="main-div">
+    <mat-card >
+        <mat-card-content>
+            <img mat-card-lg-image class="center" src="../../../assets/images/logo.png" alt="InterCityXpress">
+            <mat-card-title>Login</mat-card-title>
+            <br>
+          <form
+            class="example-form"
+            [formGroup]="loginForm"
+            (ngSubmit)="loginUser()"
+          >
+              <mat-form-field class="example-full-width">
+                <mat-label>Email</mat-label>
+                <input
+                  matInput
+                  formControlName="email"
+                  placeholder="Enter Email"
+                  required
+                />
+                <mat-error *ngIf="loginForm.get('email')?.invalid">{{getEmailErrorMessage()}}</mat-error>
+              </mat-form-field>
+  
+              <mat-form-field class="example-full-width">
+                <mat-label>Password</mat-label>
+                <input
+                  matInput
+                  formControlName="password"
+                  placeholder="Enter Password"
+                  type="password"
+                />
+                <mat-error *ngIf="loginForm.get('password')?.hasError('required')">You must enter a password</mat-error>
+              </mat-form-field>
+            <mat-card-actions align="end">
+                <button mat-raised-button color="primary">Login</button>
+            </mat-card-actions>
+  
+          </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  

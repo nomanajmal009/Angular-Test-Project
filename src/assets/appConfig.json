@@ -1,0 +1,8 @@
+{
+    "appName": "IntercityXpress",
+    "apiBaseUrl": "http://ec2-157-175-205-132.me-south-1.compute.amazonaws.com:8282/api/admin",
+    "mapsApiKey": "AIzaSyAdGc2L2VjOlGeRQ8ITHix3Q1t-oGoXFfU",
+    "developerName": "InterPay Technologies",
+    "developerUrl": "https://interpaymea.com/",
+    "apiSecret": "eyJpdiI6ImM4azJYQytVS0l0QWIwQ0tITmNqdVE9PSIsInZhbHVlIjoiV1JSRHV4N2ZwVVVBQ0pnaWl1UnpleUVrSUdwZEJYN1dVTDhxdk9YSjNySEY0SkQ5VzRuS2xpRVZJbGRwdm43NE9tYkd4Snd6TENEclpXNXNWa3FOMWc9PSIsIm1hYyI6IjU3MjMzMWExMDQ0YTRhMjNjYWNmYmY5YWQxYzhlMzA3NzgwMmI5OGQxOWQxZGUxMThkNjQ1NWUxNGZlMzBjMTAiLCJ0YWciOiIifQ"
+}
