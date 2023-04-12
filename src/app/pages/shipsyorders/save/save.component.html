@@ -1,1 +1,32 @@
-<p>save works!</p>
+<mat-card-header>
+  <mat-card-title>Shipsy Orders</mat-card-title>
+  <mat-card-subtitle>Add New</mat-card-subtitle>
+</mat-card-header>
+<div class="container">
+  <form
+    class="example-form"
+    [formGroup]="saveForm"
+    (ngSubmit)="saveShipsyOrder()"
+  >
+    <mat-form-field appearance="fill">
+      <ngx-mat-file-input
+        formControlName="uploadedfile"
+        placeholder="Upload File"
+        [accept]="'.csv, .xlsx'"
+      ></ngx-mat-file-input>
+      <mat-icon matSuffix>folder</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Select Business</mat-label>
+      <mat-select>
+        <mat-option value="one">First option</mat-option>
+        <mat-option value="two">Second option</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-card-actions>
+      <button mat-raised-button color="primary">Save</button>
+    </mat-card-actions>
+  </form>
+</div>

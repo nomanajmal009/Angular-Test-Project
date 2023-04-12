@@ -24,7 +24,6 @@ export class HeaderComponent{
     this.service.logout().subscribe(
       (data) => {
         this.logoutData = data
-        console.log(data)
         if(this.logoutData?.status === true){
           this.toastr.success(this.logoutData?.message)
           sessionStorage.removeItem('token')

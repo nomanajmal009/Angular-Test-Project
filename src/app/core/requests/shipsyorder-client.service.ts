@@ -1,6 +1,5 @@
 import { Injectable, Inject } from '@angular/core';
 import { Observable } from 'rxjs';
-import { switchMap } from 'rxjs/operators';
 import { ShipsyOrderListResponse } from '../models/shipsyorder/shipsyorder-list-response';
 import { ShipsyOrder } from '../models/shipsyorder/shipsyorder';
 import { Business } from '../models/shipsyorder/business';
